@@ -13,6 +13,7 @@ class Calculator extends Component {
   render() {
     return (
       <div>
+        <Display equation={this.state.equation} display={this.state.display} />
         <Button id="clear" value="clear" display="AC" />
         <Button id="sign" value="+/-" display="±" />
         <Button id="percent" value="%" display="%" />
@@ -36,6 +37,8 @@ class Calculator extends Component {
     );
   }
 }
+
+const Display = props => <div id="calc-display"><span id="eq">{props.equation}</span><span id="dis">{props.display}</span></div>;
 
 const Button = props => <button type="button" id={props.id} value={props.value}>{props.display}</button>;
 
