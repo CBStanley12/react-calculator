@@ -67,3 +67,13 @@ button:hover {
 button:focus { outline: 0; }
 .num { background-color: #A9A9A9; }
 .oper { background-color: orange; }
+
+/* Responsive for Small Screens */
+@media only screen and (max-width: 767px) {
+  .container{
+    grid-template-columns: 6% repeat(4, 22%) 6%;
+    grid-template-rows: 5% 5% 20% repeat(5, 13%) 5%;
+  }
+  #dis { font-size: 12vw; }
+  #eq { font-size: 4vw; }
+}
