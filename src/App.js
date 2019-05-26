@@ -44,7 +44,28 @@ class Calculator extends Component {
   }
 
   operInput(e){
-
+    if(this.state.equation.includes("=")){
+      let val = this.state.display;
+      val += e.currentTarget.value;
+      this.setState({
+        equation: val
+      });
+    } else {
+      if(this.state.equation != "" && this.state.equation.match(/[*\-\/+]$/) == null){
+        let val = this.state.equation;
+        val += e.currentTarget.value;
+        this.setState({
+          equation: val
+        });
+      } else if(this.state.equation.match(/[*\-\/+]$/) != null){
+        let val = this.state.equation;
+        val = val.substring(0, (val.length-1));
+        val += e.currentTarget.value;
+        this.setState({
+          equation: val
+        });
+      }
+    }
   }
 
   decInput(e){
