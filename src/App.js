@@ -69,7 +69,24 @@ class Calculator extends Component {
   }
 
   decInput(e){
-    
+    if(this.state.equation == ""){
+      let val = '0.';
+      this.setState({
+        display: val,
+        equation: val
+      });
+    } else if(this.state.equation.match(/[+\-*\/]$/)){
+      let val = '0.';
+      this.setState({
+        display: val,
+        equation: this.state.equation + val
+      });
+    } else if(!this.state.display.includes(".")){
+      this.setState({
+        display: this.state.display + e.currentTarget.value,
+        equation: this.state.equation + e.currentTarget.value
+      });
+    }
   }
 
   clearInput(){
