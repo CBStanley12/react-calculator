@@ -24,11 +24,14 @@ class Calculator extends Component {
   }
 
   decInput(e){
-
+    
   }
 
   clearInput(){
-
+    this.setState({
+      display: "0",
+      equation: ""
+    });
   }
 
   calculate(){
