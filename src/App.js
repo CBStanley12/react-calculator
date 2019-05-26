@@ -35,7 +35,7 @@ class Calculator extends Component {
         display: e.currentTarget.value,
         equation: val
       });
-    } else if(this.state.display === "0" && e.currentTarget.value !== "0") {
+    } else if(this.state.display === "0" && e.currentTarget.value !== "0" || this.state.equation.includes("=")) {
       this.setState({
         display: e.currentTarget.value,
         equation: e.currentTarget.value
@@ -69,7 +69,7 @@ class Calculator extends Component {
   }
 
   decInput(e){
-    if(this.state.equation == ""){
+    if(this.state.equation == "" || this.state.equation.includes("=")){
       let val = '0.';
       this.setState({
         display: val,
@@ -97,7 +97,20 @@ class Calculator extends Component {
   }
 
   calculate(){
-
+    if(this.state.equation.includes("=")){
+      let val = `${this.state.display} = ${this.state.display}`;
+      this.setState({
+        equation: val
+      });
+    } else if(this.state.equation != "" && this.state.equation.match(/[+\-*\/]/) != null && this.state.equation.match(/[+\-*\/]$/) == null) {
+      let result = Number.isInteger(eval(this.state.equation)) ? eval(this.state.equation) : parseFloat(eval(this.state.equation).toFixed(5));
+      let val = this.state.equation;
+      val += ` = ${result}`;
+      this.setState({
+        display: result,
+        equation: val
+      });
+    }
   }
 
   render() {
