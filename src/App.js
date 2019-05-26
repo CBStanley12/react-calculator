@@ -17,22 +17,22 @@ class Calculator extends Component {
         <Button id="clear" value="clear" display="AC" class="row-3 col-1" />
         <Button id="sign" value="+/-" display="±" class="row-3 col-2" />
         <Button id="percent" value="%" display="%" class="row-3 col-3" />
-        <Button id="divide" value="/" display="÷" class="row-3 col-4" />
-        <Button id="seven" value="7" display="7" class="row-4 col-1" />
-        <Button id="eight" value="8" display="8" class="row-4 col-2" />
-        <Button id="nine" value="9" display="9" class="row-4 col-3" />
-        <Button id="multiply" value="*" display="×" class="row-4 col-4" />
-        <Button id="four" value="4" display="4" class="row-5 col-1" />
-        <Button id="five" value="5" display="5" class="row-5 col-2" />
-        <Button id="six" value="6" display="6" class="row-5 col-3" />
-        <Button id="subtract" value="-" display="−" class="row-5 col-4" />
-        <Button id="one" value="1" display="1" class="row-6 col-1" />
-        <Button id="two" value="2" display="2" class="row-6 col-2" />
-        <Button id="three" value="3" display="3" class="row-6 col-3" />
-        <Button id="add" value="+" display="+" class="row-6 col-4" />
-        <Button id="zero" value="0" display="0" class="row-7 col-1-2" />
-        <Button id="decimal" value="." display="." class="row-7 col-3" />
-        <Button id="equals" value="=" display="=" class="row-7 col-4" />
+        <Button id="divide" value="/" display="÷" class="oper row-3 col-4" />
+        <Button id="seven" value="7" display="7" class="num row-4 col-1" />
+        <Button id="eight" value="8" display="8" class="num row-4 col-2" />
+        <Button id="nine" value="9" display="9" class="num row-4 col-3" />
+        <Button id="multiply" value="*" display="×" class="oper row-4 col-4" />
+        <Button id="four" value="4" display="4" class="num row-5 col-1" />
+        <Button id="five" value="5" display="5" class="num row-5 col-2" />
+        <Button id="six" value="6" display="6" class="num row-5 col-3" />
+        <Button id="subtract" value="-" display="−" class="oper row-5 col-4" />
+        <Button id="one" value="1" display="1" class="num row-6 col-1" />
+        <Button id="two" value="2" display="2" class="num row-6 col-2" />
+        <Button id="three" value="3" display="3" class="num row-6 col-3" />
+        <Button id="add" value="+" display="+" class="oper row-6 col-4" />
+        <Button id="zero" value="0" display="0" class="num row-7 col-1-2" />
+        <Button id="decimal" value="." display="." class="num row-7 col-3" />
+        <Button id="equals" value="=" display="=" class="oper row-7 col-4" />
       </div>
     );
   }
