@@ -16,7 +16,31 @@ class Calculator extends Component {
   }
 
   numInput(e){
-
+    if(this.state.equation.match(/[0-9\.]$/) && !this.state.equation.includes("=")){
+      if(this.state.equation.match(/[+\-*\/]/) == null){
+        let val = this.state.equation + e.currentTarget.value;
+        this.setState({
+          display: val,
+          equation: val
+        });
+      } else {
+        this.setState({
+          display: this.state.display + e.currentTarget.value,
+          equation: this.state.equation + e.currentTarget.value
+        });
+      }
+    } else if(this.state.equation.match(/[+\-*\/]$/)){
+      let val = this.state.equation + e.currentTarget.value;
+      this.setState({
+        display: e.currentTarget.value,
+        equation: val
+      });
+    } else if(this.state.display === "0" && e.currentTarget.value !== "0") {
+      this.setState({
+        display: e.currentTarget.value,
+        equation: e.currentTarget.value
+      });
+    }
   }
 
   operInput(e){
