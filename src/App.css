@@ -55,6 +55,9 @@ main { height: 100%; }
 
 /* Calculator Buttons */
 button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   text-decoration: none;
   border: 1px solid black;
   cursor: grab;
