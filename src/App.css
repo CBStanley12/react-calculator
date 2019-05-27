@@ -58,6 +58,7 @@ button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  display: block;
   margin: 0;
   text-align: center;
   text-decoration: none;
