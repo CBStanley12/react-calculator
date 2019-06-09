@@ -1,4 +1,4 @@
-<h1 align="center">JavaScript Calculator</h1>
+<h1 align="center">React Calculator</h1>
 <p align="center">A responsive calculator web app built with React.js (create-react-app)</p>
 
 ## Table of Contents
